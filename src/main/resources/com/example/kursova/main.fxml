@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="614.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursova.controllers.MainController">
+    <children>
+        <TableView fx:id="mainTaxTable" layoutY="41.0" prefHeight="454.0" prefWidth="650.0">
+            <columns>
+                <TableColumn fx:id="mainIdColumn" minWidth="12.0" prefWidth="50.0" text="№" />
+                <TableColumn fx:id="mainTaxTypeColumn" minWidth="12.0" prefWidth="250.0" text="Тип податку" />
+                <TableColumn fx:id="mainUserSumColumn" prefWidth="145.0" text="Сума" />
+                <TableColumn fx:id="mainTaxInterestColumn" prefWidth="60.0" text="Процент" />
+                <TableColumn fx:id="mainResultTaxColumn" prefWidth="143.0" text="Податок" />
+            </columns>
+        </TableView>
+        <Button fx:id="mainDeleteTaxButton" layoutX="6.0" layoutY="574.0" mnemonicParsing="false" prefWidth="150.0" text="Видалити податок" />
+        <Button fx:id="mainAddTaxButton" layoutX="6.0" layoutY="532.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Додати податок" />
+        <TextField fx:id="mainFindTaxesBySearchValueField" layoutX="228.0" layoutY="532.0" prefHeight="26.0" prefWidth="193.0" />
+        <Button fx:id="mainFindTaxesBySearchValueButton" layoutX="298.0" layoutY="573.0" mnemonicParsing="false" text="Пошук" />
+        <Group layoutX="138.0" layoutY="333.0" />
+        <Button fx:id="mainFindTaxesInRangeButton" layoutX="493.0" layoutY="532.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Пошук за діапазоном" />
+        <Button fx:id="mainRefreshTaxesButton" layoutX="493.0" layoutY="573.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Оновити" />
+        <Button fx:id="mainLogoutButton" layoutX="587.0" layoutY="8.0" mnemonicParsing="false" text="Вийти" />
+        <Label layoutX="247.0" layoutY="9.0" text="Таблиця податків">
+            <font>
+                <Font name="Arial" size="20.0" />
+            </font>
+        </Label>
+      <Label fx:id="mainHelloLabel" layoutX="14.0" layoutY="13.0" text="Привіт, ">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="mainTaxResultSumLabel" alignment="CENTER" layoutX="209.0" layoutY="504.0" prefHeight="18.0" prefWidth="230.0" text="Сума податків:" />
+    </children>
+</AnchorPane>
